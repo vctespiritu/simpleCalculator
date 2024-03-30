@@ -1,9 +1,11 @@
 <template>
     <lightning-card variant="Narrow" title="Simple Calculator" icon-name="standard:budget">
         <div class="slds-var-m-around_large">
+
             <lightning-input name="calcExpressionField" type="text" label="Calc Expression"
-                value={calcExpressionFieldValue} readonly></lightning-input>
-            <lightning-input name="resultField" type="text" label="Result" value="0" readonly></lightning-input>
+                value={calcExpression} readonly></lightning-input>
+            <lightning-input name="resultField" type="text" label="Result" value={showResult} readonly></lightning-input>
+            
             <div class="slds-grid slds-wrap slds-var-m-around_large">
                 <div class="slds-col slds-var-m-vertical_small slds-size_3-of-12">
                     <lightning-button name="1" variant="brand-outline" label="1" onclick={handleClick} 
